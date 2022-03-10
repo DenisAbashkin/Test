@@ -18,11 +18,11 @@ public class Main {
 
 
     public static class User{
-        public String SecondName;
-        public String Name;
-        public int age;
+        private String SecondName;
+        private String Name;
+        private int age;
 
-        public User(String SecondName, String Name, int age){
+        private User(String SecondName, String Name, int age){
             this.SecondName = SecondName;
             this.Name = Name;
             this.age = age;
