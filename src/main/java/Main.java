@@ -12,7 +12,8 @@ public class Main {
         list.add(new User("Иванов", "Дмитрий", 25));
         list.add(new User("Аитова", "Алина", 26));
 
-        list.forEach(System.out::println);
+        //list.forEach(System.out::println);
+        list.stream().forEach(user -> System.out.println(user.SecondName +" " +user.Name+ " "+ user.age));
     }
 
 
