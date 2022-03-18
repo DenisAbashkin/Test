@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         // Получить коллекцию пользователей и вывести на экран столбиком (из файла)
 
-        String path = "E:\\!GIT\\Test\\src\\main\\java\\Users";
+        String path = "src\\main\\java\\Users";
         File file = new File(path);
 
         Scanner scanner = new Scanner(file);
