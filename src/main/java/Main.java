@@ -1,31 +1,19 @@
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.stream.Stream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-        // Получить коллекцию пользователей и вывести на экран столбиком
+    public static void main(String[] args) throws FileNotFoundException {
+        // Получить коллекцию пользователей и вывести на экран столбиком (из файла)
 
-        ArrayList<User> list = new ArrayList<User>();
-        list.add(new User("Абашкин", "Денис", 23));
-        list.add(new User("Иванов", "Дмитрий", 25));
-        list.add(new User("Аитова", "Алина", 26));
+        String path = "E:\\!GIT\\Test\\src\\main\\java\\Users";
+        File file = new File(path);
 
-        //list.forEach(System.out::println);
-        list.stream().forEach(user -> System.out.println(user.SecondName +" " +user.Name+ " "+ user.age));
-    }
-
-
-    public static class User{
-        private String SecondName;
-        private String Name;
-        private int age;
-
-        private User(String SecondName, String Name, int age){
-            this.SecondName = SecondName;
-            this.Name = Name;
-            this.age = age;
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNextLine()){
+            System.out.println(scanner.nextLine());
         }
+
+        scanner.close();
     }
 }
